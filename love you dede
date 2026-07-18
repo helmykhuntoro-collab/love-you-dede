@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buat Orang Spesial ❤️</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#ff8fb1,#ffc0cb);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.card{
+    width:350px;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1{
+    color:#ff2d75;
+}
+
+.foto{
+    width:220px;
+    height:220px;
+    border:3px dashed #ff69b4;
+    border-radius:15px;
+    margin:15px auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#999;
+    overflow:hidden;
+}
+
+.foto img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.pesan{
+    font-size:20px;
+    color:#ff2d75;
+    margin:15px 0;
+    font-weight:bold;
+}
+
+.hati{
+    position:fixed;
+    color:red;
+    animation:jatuh 5s linear infinite;
+}
+
+@keyframes jatuh{
+    0%{
+        transform:translateY(-100px);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>💖 Buat Orang Spesial 💖</h1>
+
+    <div class="pesan">
+        Love You Dede Cantik ❤️
+    </div>
+
+    <!-- Ganti foto.jpg dengan fotomu -->
+    <div class="foto">
+        <img src="foto.jpg" alt="Foto Dede">
+    </div>
+
+    <p>Terima kasih sudah hadir dan membuat hari-hariku lebih indah. ❤️</p>
+
+    <!-- Ganti intro-sempurna.mp3 dengan file lagu -->
+    <audio controls autoplay loop>
+        <source src="intro-sempurna.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+<script>
+// Efek hati jatuh
+setInterval(()=>{
+    const hati=document.createElement("div");
+    hati.innerHTML="❤️";
+    hati.classList.add("hati");
+    hati.style.left=Math.random()*100+"vw";
+    hati.style.fontSize=(20+Math.random()*20)+"px";
+    document.body.appendChild(hati);
+
+    setTimeout(()=>{
+        hati.remove();
+    },5000);
+},500);
+</script>
+
+</body>
+</html>
